@@ -11,6 +11,10 @@ app.use(express.json())
 app.use(bodyParser.json());
 app.use(todoRoutes)
 
+app.get('/home', (req, res) => {
+    res.json({ message: 'home' })
+})
+
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {
